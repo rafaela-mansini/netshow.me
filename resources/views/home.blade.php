@@ -11,7 +11,7 @@
 
     <div class="row">
         <div class="col-12">
-            <p class="text-center">Confirma abaixo os cadastros já realizados em nossos sistema. Para realizar um novo cadastro basta clicar no botão acima</p>
+            <p class="text-center">Confira abaixo os cadastros já realizados em nossos sistema. Para realizar um novo cadastro basta clicar no botão acima</p>
             <div class="table-responsive">
                 <table class="table table-bordered table-sm">
                     <thead>
@@ -24,13 +24,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">Rafaela Mansini</th>
-                            <td>rafaela@gmail.com</td>
-                            <td>(11) 99999-9999</td>
-                            <td>Teste oi</td>
-                            <td style="text-align:center"><a href="#.">Abrir</a></td>
-                        </tr>
+                    @if($pessoas->count() == 0)
+                        <tr><td colspan="5" class="text-center"><b>Nenhum cadastro foi realizado.</b></td></tr>
+                    @else
+                        @foreach($pessoas as $pessoa)
+                            <tr>
+                                <th scope="row">{{ $pessoa->nome }}</th>
+                                <td>{{ $pessoa->email }}</td>
+                                <td>{{ $pessoa->telefone }}</td>
+                                <td>{{ $pessoa->mensagem }}</td>
+                                <td style="text-align:center"><a href="{{ asset('anexos/'.$pessoa->anexo) }}">Abrir</a></td>
+                            </tr>                            
+                        @endforeach
+                    @endif
                     </tbody>
                 </table>
             </div>
