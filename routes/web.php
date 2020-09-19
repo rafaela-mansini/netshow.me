@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PaginasController@index');
 Route::get('/cadastrar', 'PaginasController@cadastro')->name('cadastro');
+Route::post('/cadastrar', 'PessoaController@store')->name('salvarCadastro');
