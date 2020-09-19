@@ -4,13 +4,6 @@
 
 ---
 
-# 📌 Índice
-
-- [Requisitos](#-requisitos)
-- [Começando](#-começando)
-- [Tecnologias Usadas](#-tecnologias-usadas)
-- [Créditos](#-créditos)
-
 # Requisitos
 
 **Você precisa ter instalado em sua máquina o [Composer](https://getcomposer.org/). Para clonar o projeto em sua máquina, execute este comando:**
