@@ -33,7 +33,7 @@
                                 <td>{{ $pessoa->email }}</td>
                                 <td>{{ $pessoa->telefone }}</td>
                                 <td>{{ $pessoa->mensagem }}</td>
-                                <td style="text-align:center"><a href="{{ asset('anexos/'.$pessoa->anexo) }}">Abrir</a></td>
+                                <td style="text-align:center"><a href="{{ asset('storage/anexos/'.$pessoa->anexo) }}">Abrir</a></td>
                             </tr>                            
                         @endforeach
                     @endif
